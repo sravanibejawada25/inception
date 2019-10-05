@@ -283,7 +283,7 @@ public class WikiDataReification
         }
         catch (QueryEvaluationException e) {
             log.warn("No such statementId in knowledge base", e);
-            return null;
+            return Collections.EMPTY_LIST;
         }
 
         List<Statement> statements = new ArrayList<>();
@@ -329,7 +329,7 @@ public class WikiDataReification
         }
         catch (QueryEvaluationException e) {
             log.warn("No such statementId in knowledge base", e);
-            return null;
+            return Collections.EMPTY_LIST;
         }
 
         List<Statement> statements = new ArrayList<>();

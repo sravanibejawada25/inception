@@ -202,7 +202,7 @@ public class SimulationLearningCurvePanel
         if (selectedRecommenderPanel.getObject() == null
                 || selectedRecommenderPanel.getObject().getTool() == null) {
             LOG.error("Please select a recommender from the list");
-            return null;
+            return new String[] {};
         }
 
         //get all the source documents related to the project
@@ -232,7 +232,7 @@ public class SimulationLearningCurvePanel
         
         if (recommender == null) {
             LOG.warn("Unknown Recommender selected");
-            return null;
+            return new String[] {};
         }
         
         if (!evaluate) {

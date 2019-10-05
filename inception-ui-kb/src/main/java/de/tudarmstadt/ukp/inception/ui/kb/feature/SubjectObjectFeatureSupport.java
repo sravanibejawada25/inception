@@ -24,6 +24,7 @@ import static de.tudarmstadt.ukp.inception.ui.kb.feature.FactLinkingConstants.SU
 import static de.tudarmstadt.ukp.inception.ui.kb.feature.FactLinkingConstants.SUBJECT_ROLE;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import org.apache.uima.cas.ArrayFS;
@@ -178,7 +179,7 @@ public class SubjectObjectFeatureSupport
             return (List<LinkWithRoleModel>) aValue;
         }
         else if (aValue == null) {
-            return null;
+            return Collections.EMPTY_LIST;
         }
         else {
             throw new IllegalArgumentException(

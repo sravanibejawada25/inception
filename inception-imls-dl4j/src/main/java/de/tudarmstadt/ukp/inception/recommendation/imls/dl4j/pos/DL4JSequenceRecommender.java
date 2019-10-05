@@ -654,7 +654,7 @@ public class DL4JSequenceRecommender
                 return asList(tags);
             }
             else {
-                return null;
+                return Collections.EMPTY_LIST;
             }
         }
     }

@@ -18,6 +18,7 @@
 package de.tudarmstadt.ukp.inception.recommendation.util;
 
 import java.io.File;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -58,13 +59,13 @@ public class RepositoryUtil
     {
         if (dc == null) {
             logger.error("Cannot create file paths. DocumentService object is null");
-            return null;
+            return Collections.EMPTY_LIST;
         }
 
         File dir = new File(dc.getDir(), "/" + ProjectService.PROJECT_FOLDER + "/");
 
         if (!dir.exists()) {
-            return null;
+            return Collections.EMPTY_LIST;
         }
 
         List<File> result = new LinkedList<>();
