@@ -291,7 +291,7 @@ public class OpenNlpPosRecommender
 
             // If the tag is neither PAD nor null, then there is at
             // least one annotation the trainer can work with.
-            if (tag != null & !PAD.equals(tag)) {
+            if (tag != null && !PAD.equals(tag)) {
                 hasAnnotations = true;
             }
 
